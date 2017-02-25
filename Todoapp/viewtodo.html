@@ -1,0 +1,30 @@
+<html><body>
+  <P style="text-align:center;">View User Todos</P>
+  <table align="center" border="1">
+    
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Completed</th>
+      <th>Update</th>
+    </tr>
+    
+    <tr ng-repeat=" t in todo"  >
+      <td><input type="checkbox" ng-model="ckecked">{{t.id}}</td>
+    <td>  <input type="text" value={{t.title}} ng-disabled="{{t.completed}}">
+     </td><td> {{ckecked}}</td><td>
+      <button class="btn btn-primary" ng-click="save(t.completed)">
+        save
+      </button>
+      <button class="btn btn-primary" ng-click="del(t.completed)">
+        delete
+      </button></td>
+    </tr></table>
+    
+    <p> Create new Todo</p>
+    <p><input type="text" >
+    <button class="btn btn-primary" ng-click="create()">
+        Create Todo
+      </button>
+    </p>
+</body></html>

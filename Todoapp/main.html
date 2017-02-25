@@ -1,0 +1,14 @@
+<html><body>
+  <P style="text-align:center;"> List  of Users</P>
+  <table>
+    
+    <tr ng-repeat=" u in user" class="flex-container">
+     
+        <td class="flex-item">
+          {{u.id}}  {{u.username}}<a href="#/viewtodo" >
+          
+          <button  ng-click="view($index)" class="btn btn-default">
+            viewToDo</button></a></td>
+        
+    </tr></table>
+</body></html>
